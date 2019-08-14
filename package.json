@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "postcss-background-inline-base64",
+  "description": "PostCSS plugin for encode the image file to base64.",
+  "keywords": [
+    "postcss",
+    "base64",
+    "inline",
+    "background image"
+  ],
+  "author": {
+    "name": "Lev Nazarenko",
+    "email": "lynazarenko@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:mightydes/postcss-background-inline-base64.git"
+  },
+  "homepage": "https://github.com/mightydes/postcss-background-inline-base64",
+  "bugs": {
+    "url": "https://github.com/mightydes/postcss-background-inline-base64/issues"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "dependencies": {
+    "postcss": "^5.2"
+  },
+  "devDependencies": {}
+}
