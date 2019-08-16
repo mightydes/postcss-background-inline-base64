@@ -9,7 +9,7 @@ The PostCSS plugin to insert base64 embedded backgrounds
 
 .pageLoading {
   min-height: 200px;
-  background-image: inline("./loader.gif");
+  background-image: url("./loader.gif") /*b64*/;
   background-position: center 30px;
   background-repeat: no-repeat;
 }
@@ -18,7 +18,7 @@ The PostCSS plugin to insert base64 embedded backgrounds
 
 The line
 
-`background-image: inline("./loader.gif");`
+`background-image: url("./loader.gif") /*b64*/;`
 
 will be replaced with the
 

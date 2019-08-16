@@ -7,9 +7,12 @@ module.exports = postcss.plugin('inline-base64', (opts) => {
 
     return function (css, result) {
         css.walkDecls(/^background(-image)?$/, (decl) => {
-            let idx = decl.value.indexOf('inline');
-            if (idx > -1) {
-                let rel = decl.value.replace(/^inline\s*\(\s*['"]|['"]\s*\)\s*$/g, '');
+            let b64 = decl.value.indexOf('url') > -1
+                && decl.raws.value !== undefined
+                && decl.raws.value.raw !== undefined
+                && decl.raws.value.raw.indexOf('b64') > -1;
+            if (b64) {
+                let rel = decl.value.replace(/^url\s*\(\s*['"]|['"]\s*\)\s*$/g, '');
                 let filePath = path.normalize(
                     path.join(path.dirname(result.opts.from), rel)
                 );
